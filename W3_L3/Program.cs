@@ -38,9 +38,11 @@ namespace W3_L3
         {
 
             // create a new instance of the Person class
-            Person person = new Person("Krytia" );
-            Person showAge = new Person(19);
-            Console.WriteLine(person.SayHello);
+            Person person = new Person();
+            person.SayHello = "Krytia";
+            person.ShowAge = 19;
+            Console.WriteLine("{0} says Hello", person.SayHello);
+            Console.WriteLine("{0} is {1} years old",person.SayHello,person.ShowAge);
 
 
 
@@ -50,10 +52,10 @@ namespace W3_L3
 
             // get the Name value and print to console
 
-            Console.WriteLine(person.SayHello);
-            Console.WriteLine(person.ShowAge);
+
+
         }
-       
+
 
     }
 

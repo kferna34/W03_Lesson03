@@ -84,7 +84,7 @@ namespace W3_L3
 
         * This is a consructor that takes name as a parameter and passes
 
-        * it to the _name private instance variable
+        * it to the _sayHello private instance variable
 
         *
 
@@ -101,7 +101,20 @@ namespace W3_L3
             this._sayHello = sayHello;
 
         }
-    
+        /**
+
+        * This is a consructor that takes name as a parameter and passes
+
+        * it to the _showAge private instance variable
+
+        *
+
+        * @constructor Person
+
+        * @param {int} age
+
+*/
+
         public int ShowAge
         {
             get
@@ -114,13 +127,12 @@ namespace W3_L3
             }
         }
 
-        public Person(int showAge)
 
+        public Person(int ShowAge)
         {
-
-            this._showAge = 100 ;
-
+            this._showAge = 20;
         }
+
     }
-}   
+}
 
