@@ -24,7 +24,9 @@ namespace W3_L3
 
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++
 
-        private string _name;
+        private string _sayHello;
+        private int _showAge;
+
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++
 
@@ -38,7 +40,7 @@ namespace W3_L3
 
 */
 
-        public string Name
+        public string SayHello
 
         {
 
@@ -46,7 +48,7 @@ namespace W3_L3
 
             {
 
-                return this._name;
+                return this._sayHello;
 
             }
 
@@ -54,7 +56,7 @@ namespace W3_L3
 
             {
 
-                this._name = value;
+                this._sayHello = value;
 
             }
 
@@ -74,7 +76,7 @@ namespace W3_L3
 
         {
 
-            this._name = "unknown name!";
+            this._sayHello = "Unknown Name!! ";
 
         }
 
@@ -92,13 +94,33 @@ namespace W3_L3
 
 */
 
-        public Person(string name)
+        public Person(string sayHello)
 
         {
 
-            this._name = name;
+            this._sayHello = sayHello;
 
         }
+    
+        public int ShowAge
+        {
+            get
+            {
+                return this._showAge;
+            }
+            set
+            {
+                this._showAge = value;
+            }
+        }
 
+        public Person(int showAge)
+
+        {
+
+            this._showAge = 100 ;
+
+        }
     }
-}
+}   
+

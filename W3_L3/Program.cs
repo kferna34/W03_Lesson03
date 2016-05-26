@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using W3_L3;
 
 namespace W3_L3
 {
@@ -39,10 +38,11 @@ namespace W3_L3
         {
 
             // create a new instance of the Person class
+            Person person = new Person("Krytia" );
+            Person showAge = new Person(19);
+            Console.WriteLine(person.SayHello);
 
-            Person person = new Person("Tom");
 
-            Console.WriteLine(person.Name);
 
             // set a value in the Name property of the Person class
 
@@ -50,9 +50,10 @@ namespace W3_L3
 
             // get the Name value and print to console
 
-            Console.WriteLine(person.Name);
-
+            Console.WriteLine(person.SayHello);
+            Console.WriteLine(person.ShowAge);
         }
+       
 
     }
 
