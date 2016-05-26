@@ -48,7 +48,7 @@ namespace W3_L3
 
             // set a value in the Name property of the Person class
 
-            //person.Name = "Tom";
+            //person.Name = "whatever name";
 
             // get the Name value and print to console
 
