@@ -14,7 +14,9 @@ namespace W3_L3
 
     * @class Person
 
-    * @field _name {string}
+    * @field {string}_name 
+    *@field {int} age
+
 
 */
 
@@ -24,15 +26,17 @@ namespace W3_L3
 
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++
 
-        private string _sayHello;
-        private int _showAge;
+        private string _name;
+
+        private int _age;
 
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++
 
         /**
-
-        * This is a property for our _name field
+        *<summary>
+        * This is a property for our _SayHello field
+        </summary>
 
         *
 
@@ -40,7 +44,7 @@ namespace W3_L3
 
 */
 
-        public string SayHello
+        public string Name
 
         {
 
@@ -48,35 +52,37 @@ namespace W3_L3
 
             {
 
-                return this._sayHello;
+                return this._name;
 
             }
 
             set
 
             {
-
-                this._sayHello = value;
+                //Console.WriteLine("_name value set");
+                this._name = value;
 
             }
 
         }
 
         /**
-
-        * This is the default empty constructor for the Person class
-
+        *<summary>This is the default empty constructor for the Person class 
+        *</summary>
+        * 
         *
 
         * @constructor Person
 
 */
 
-        public Person()
+        public Person()// this is an example of a constructor || "triggers" || default constructor 
 
         {
+            //initialize public properties 
+            this.Name = "Unknown Name!!";
+            this.Age = 0;
 
-            this._sayHello = "Unknown Name!! ";
 
         }
 
@@ -94,43 +100,86 @@ namespace W3_L3
 
 */
 
-        public Person(string sayHello)
+        public Person(string name)
 
         {
 
-            this._sayHello = sayHello;
+            this.Name = name;
+            this.SaysHello();
 
         }
-        /**
+        /*
+        *<summay>
+        *This method outputs the _name value with "says Hello " to the console
+        *</summary>
+        *@ method _saysHello
+        *@returns {void}
+        */
 
-        * This is a consructor that takes name as a parameter and passes
+        public void SaysHello()
+        {
+            Console.WriteLine(this._name + " Says Hello!");
 
-        * it to the _showAge private instance variable
+        }
 
-        *
 
-        * @constructor Person
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //+++++++++++++++++++++++++++++AGE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        * @param {int} age
-
-*/
-
-        public int ShowAge
+        /*
+   *<summary>
+   *This is a public property for our private _age field
+   *</summary>
+   *@property int Age
+   */
+        public int Age
         {
             get
             {
-                return this._showAge;
+                return this._age;
             }
             set
             {
-                this._showAge = value;
+                this._age = value;
             }
         }
-
-
-        public Person(int ShowAge)
+        /*
+        *<summary> 
+        *this is a constructor that takes age as a param && passes
+        *it to the _age provate instance var   
+        *</summary>
+        *  @constructor Person
+        *@param int age
+        */
+        public Person(int age)
         {
-            this._showAge = 20;
+            this.Name = "Unknown Name !!";
+            this.Age = age;
+
+        }
+        /*
+        *<summary>
+        * this is a constuctor that takes both name and age as param
+        *assigns the local nameval to the name prop
+        * assigns the local age val to the age prop
+        *</summary>
+        */
+        public Person (string name, int age)
+        {
+            this.Name = name;
+            this.Age = age;
+        }
+        /**
+        *<summary>
+        *this method outputs the _name && _age value in the following format :(this.Name + "is" + this.Age +"Years Old")
+        *</summary>
+        *@method ShowAge
+        *@returns void 
+        */
+
+        public void ShowsAge()
+        {
+            Console.WriteLine(this.Name + " is " + this.Age + " Years Old");
         }
 
     }

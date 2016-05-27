@@ -38,11 +38,35 @@ namespace W3_L3
         {
 
             // create a new instance of the Person class
-            Person person = new Person();
-            person.SayHello = "Krytia";
-            person.ShowAge = 19;
-            Console.WriteLine("{0} says Hello", person.SayHello);
-            Console.WriteLine("{0} is {1} years old",person.SayHello,person.ShowAge);
+            Person angela = new Person(); //display by assigning val in a var
+            angela.Name = "Angela";
+            angela.Age = 27;
+            angela.SaysHello();
+            angela.ShowsAge();
+            Console.WriteLine();
+
+
+            Person krytia = new Person("Krytia "); // same as displaying says hello as new ("")
+            krytia.Age = 19;
+            krytia.ShowsAge();
+
+            Console.WriteLine();
+
+            Person trini = new Person(20);
+            trini.Name = "Trini";
+            trini.SaysHello();
+            trini.ShowsAge();
+
+            Console.WriteLine(); //display
+            Person alyssa = new Person("Alyssa", 23);
+            alyssa.SaysHello();
+            alyssa.ShowsAge();
+
+
+
+
+
+
 
 
 
